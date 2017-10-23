@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.sdl.decisionhelper">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:label="Decision Helper">
+
+        <activity android:name="com.google.sdl.decisionhelper.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.google.sdl.decisionhelper.Group">
+
+        </activity>
+
+        <activity
+            android:name="com.google.sdl.decisionhelper.CreateQuestion"
+            android:label="Add Question">
+        </activity>
+
+        <activity
+            android:name="com.google.sdl.decisionhelper.Question">
+        </activity>
+
+        <activity
+            android:name="com.google.sdl.decisionhelper.Chatting">
+        </activity>
+
+        <activity
+            android:name="com.google.sdl.decisionhelper.Settings"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".UserDisplayProfile"
+            android:label="Profile">
+
+        </activity>
+
+        <activity
+            android:name="com.google.sdl.decisionhelper.UserProfile"
+            android:label="Your Profile">
+
+        </activity>
+
+        <activity
+            android:name=".CreateGroup"
+            android:label="Creat Group">
+        </activity>
+
+        <activity
+            android:name=".Register"
+            android:label="Register">
+        </activity>
+
+        <activity
+            android:name=".GroupProfile"
+            android:label="Group Proile">
+        </activity>
+
+        <activity
+            android:name="AddParticipants"
+            android:label="Add Participants">
+        </activity>
+
+
+        <service
+            android:name=".QuestionNotification"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        AndroidManifest.xml
+
+    </application>
+</manifest>
